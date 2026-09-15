@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasurbek Al Oshxonasi - Milliy va Xorijiy Taomlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+    <div class="logo-icon-box">
+        <svg viewBox="0 0 64 64" width="45" height="45">
+            <defs>
+                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#e63946"/>
+                    <stop offset="100%" style="stop-color:#f4a261"/>
+                </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="30" fill="url(#logoGrad)"/>
+            <ellipse cx="32" cy="36" rx="18" ry="5" fill="#fff" opacity="0.9"/>
+            <rect x="14" y="28" width="36" height="3" rx="1.5" fill="#fff"/>
+            <circle cx="32" cy="20" r="3" fill="#fff"/>
+        </svg>
+    </div>
+    <h1>Jasurbek <span>Al Oshxonasi</span></h1>
+</div>
+            <nav class="nav">
+                <a href="#home">Bosh sahifa</a>
+                <a href="#milliy">Milliy taomlar</a>
+                <a href="#xorijiy">Xorijiy taomlar</a>
+                <a href="#about">Biz haqimizda</a>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2>Mazali Taomlar Olamiga Xush Kelibsiz!</h2>
+            <p>200+ dan ortiq milliy va xorijiy taomlar retseptlari</p>
+            <div class="hero-buttons">
+                <a href="#milliy" class="btn btn-primary">Milliy Taomlar</a>
+                <a href="#xorijiy" class="btn btn-secondary">Xorijiy Taomlar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QIDIRUV -->
+    <section class="search-section">
+        <div class="container">
+            <input type="text" id="searchInput" placeholder="🔍 Taom nomini qidiring..." class="search-input">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Barchasi</button>
+                <button class="filter-btn" data-filter="milliy">Milliy</button>
+                <button class="filter-btn" data-filter="xorijiy">Xorijiy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MILLIY TAOMLAR -->
+    <section class="section" id="milliy">
+        <div class="container">
+            <h2 class="section-title">🇺🇿 Milliy Taomlar</h2>
+            <p class="section-subtitle">O'zbek milliy taomlarining eng sara retseptlari</p>
+            <div class="cards-grid" id="milliyGrid"></div>
+        </div>
+    </section>
+
+    <!-- XORIJIY TAOMLAR -->
+    <section class="section section-alt" id="xorijiy">
+        <div class="container">
+            <h2 class="section-title">🌍 Xorijiy Taomlar</h2>
+            <p class="section-subtitle">Dunyoning turli burchaklaridan mazali taomlar</p>
+            <div class="cards-grid" id="xorijiyGrid"></div>
+        </div>
+    </section>
+
+    <!-- BIZ HAQIMIZDA -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">Biz Haqimizda</h2>
+            <p class="about-text">
+                <strong>Jasurbek Al Oshxonasi</strong> — bu eng mazali milliy va xorijiy taomlar retseptlari 
+                to'plangan platforma. Bizning maqsadimiz — har bir insonga oson va tushunarli tarzda 
+                mazali taomlar tayyorlashni o'rgatish. 100+ milliy va 100+ xorijiy taomlar, ularning 
+                rasmlari va batafsil retseptlari bilan tanishing!
+            </p>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <h3 id="modalTitle"></h3>
+            <div class="modal-info">
+                <span id="modalTime"></span>
+                <span id="modalPortion"></span>
+                <span id="modalType"></span>
+            </div>
+            <h4>🧾 Masalliqlar:</h4>
+            <ul id="modalIngredients"></ul>
+            <h4>👨‍🍳 Tayyorlanishi:</h4>
+            <p id="modalRecipe"></p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Jasurbek Al Oshxonasi. Barcha huquqlar himoyalangan.</p>
+            <p>Mazali taomlar — baxtli hayot!</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
